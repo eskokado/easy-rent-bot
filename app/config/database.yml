@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV['POSTGRES_USER'] || 'postgres'%>
+  password: <%= ENV['POSTGRES_PASSWD'] || 'postgres' %>
+  host: <%= ENV['POSTGRES_HOST'] || 'db' %>
+  port: 5432
+  pool: 5
+
+development:
+  <<: *default
+  database: easy_rent_bot_development
+
+test:
+  <<: *default
+  database: easy_rent_bot_test
+
+production:
+  <<: *default
+  database: easy_rent_bot_production

@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "0af9fc16-96a2-4fd8-9f10-ce38a0026565",
+		"name": "Lex stream",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7474749"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Session",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"users\": \"hemreshon@teste.com\",\n    \"password\": 123456\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8181/users/sign_in",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"users",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
