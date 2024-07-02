@@ -11,6 +11,16 @@ cp .env_example .env
 docker-compose up -d
 ```
 
+## Recompilar as imagens e Subir App Docker (Optional)
+```shell
+docker-compose up --build
+```
+
+## Apagar Banco de Dados (Optional)
+```shell
+docker-compose exec app rails db:drop
+```
+
 ## Criar Banco de Dados
 ```shell
 docker-compose exec app rails db:create
@@ -26,9 +36,14 @@ docker-compose exec app rails db:migrate
 docker-compose run app rails db:seed
 ```
 
-## Rodar o build
+## Permitir ler, alterar e executar em postgres
 ```shell
 sudo chmod -R 777 postgres
+```
+
+## Permitir ler, alterar e executar em app
+```shell
+sudo chmod -R 777 app
 ```
 
 ## Rails console
